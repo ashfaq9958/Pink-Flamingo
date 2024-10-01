@@ -10,7 +10,7 @@ import { TextField } from "@mui/material";
 const SearchBar = () => {
   return (
     <div className="sm:mt-5 mt-3">
-      <div className="w-full md:w-[85%] xl:w-[70%] mx-auto flex flex-col sm:flex-row items-center justify-between  gap-4 sm:p-0 p-2">
+      <div className="w-full md:w-[85%] xl:w-[70%] mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 sm:p-0 p-2">
         {/* Logo */}
         <div className="w-28 md:w-32">
           <img src={logo} alt="Company Logo" className="w-full" />
