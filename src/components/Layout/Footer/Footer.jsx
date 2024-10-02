@@ -34,7 +34,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="bg-[#FA5C98] w-[90%] mx-auto py-16">
+    <div className="bg-[#FA5C98] w-[90%] mx-auto py-16 mb-5">
 
       <div className="flex flex-col lg:flex-row lg:justify-around lg:items-center gap-6 p-4">
         <div className="flex gap-2 items-center ml-4">
@@ -60,7 +60,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <hr className="border-t border-white opacity-30 my-6" />
+      <hr className="border-t border-white my-6" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:justify-around gap-6 text-white px-4 lg:px-16 w-[70%] sm:w-[90%] mx-auto">
         <FooterSection title="Contact" items={contactInfo} />

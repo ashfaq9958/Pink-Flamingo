@@ -22,9 +22,7 @@ const Navbar = () => {
 
   return (
     <div className="mt-5 w-full">
-      {/* Hamburger for small screens */}
       <div className="sm:hidden flex justify-end items-center px-5">
-        {/* <div className="font-semibold text-[18px]">Brand Logo</div> */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="text-black focus:outline-none"
@@ -37,16 +35,13 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Links for larger screens */}
-      <div className="hidden sm:flex sm:w-[90%] sm:mx-auto sm:gap-9 sm:p-2 sm:justify-center sm:text-center sm:items-center sm:font-semibold sm:text-[16.64px]">
+      <div className="hidden sm:flex sm:w-[90%] sm:mx-auto sm:gap-9 sm:p-2 sm:justify-center sm:text-center sm:items-center sm:font-semibold sm:text-sm md:text-base">
         {links.map((item) => (
           <NavLink key={item.title} to={item.link} style={linkStyle}>
             {item.title}
           </NavLink>
         ))}
       </div>
-
-      {/* Links for small screens when the menu is open */}
       {isOpen && (
         <div className="flex flex-col gap-4 items-center sm:hidden">
           {links.map((item) => (
@@ -54,7 +49,7 @@ const Navbar = () => {
               key={item.title}
               to={item.link}
               style={linkStyle}
-              onClick={() => setIsOpen(false)} // Close menu on link click
+              onClick={() => setIsOpen(false)}
               className="font-semibold text-[16px]"
             >
               {item.title}
