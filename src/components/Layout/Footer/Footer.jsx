@@ -7,96 +7,93 @@ import youtube from "../../../assets/footer/youtube.png";
 import { Button } from "@mui/material";
 
 const Footer = () => {
-  return (
-    <div>
-      <div className="bg-[#FA5C98] w-[90%] mx-auto h-auto py-10">
-        <div className="flex justify-between p-10 items-center flex-wrap">
-          <div className="flex gap-2 items-center ml-20">
-            <img src={messageicon} alt="message" className="w-6" />
-            <p className="text-[18px] text-white">Sign Up To Shop Now</p>
-          </div>
+  const contactInfo = [
+    "Demo Store",
+    "No. 1258 Utawala, Nairobi, 01010",
+    "Kenya",
+    "+25470101010",
+    "example@gmail.com",
+  ];
 
-          <div className="relative">
-            <input
-              type="text"
-              placeholder="Enter your email"
-              className="p-4 w-[30rem] rounded-[5px] border-none h-11"
-            />
+  const information = [
+    "Privacy Policy",
+    "Refund Policy",
+    "Shipping Policy",
+    "Terms Of Services",
+    "Blogs",
+  ];
+
+  const account = ["Search", "About Us", "Faq", "Contact", "Help"];
+
+  const quickLinks = [
+    "Incense Sticks",
+    "Shankh",
+    "Kalash",
+    "Incense Holders",
+    "Cone Dhoop",
+  ];
+
+  return (
+    <div className="bg-[#FA5C98] w-[90%] mx-auto py-16">
+
+      <div className="flex flex-col lg:flex-row lg:justify-around lg:items-center gap-6 p-4">
+        <div className="flex gap-2 items-center ml-4">
+          <img src={messageicon} alt="message" className="w-6" />
+          <p className="text-[18px] text-white">Sign Up To Shop Now</p>
+        </div>
+
+        <div className="relative w-full lg:w-auto p-3">
+          <input
+            type="text"
+            placeholder="Enter your email"
+            className="px-1 py-4 w-full lg:w-[30rem] rounded-[5px] border-none h-11 custom-placeholder"
+          />
+
+          <div className="absolute sm:right-4 right-4 top-1  mt-4 ">
             <Button
               variant="contained"
-              className="!bg-[#fa5c98] absolute right-[121px] top-[-3.5px] h-full rounded-l-none"
+              className="!bg-[#fa5c98] h-full rounded-l-none w-20 !text-[10px]"
             >
               Subscribe
             </Button>
           </div>
         </div>
+      </div>
 
-        <hr className="border-t border-white opacity-30 my-6" />
+      <hr className="border-t border-white opacity-30 my-6" />
 
-        <div className="flex flex-wrap justify-around text-[#ffffff] px-10">
-          <div className="mb-6">
-            <p className="font-medium text-[20px]">Contact</p>
-            <ul className="text-sm">
-              <li>Demo Store</li>
-              <li>No. 1258 Utawala, Nairobi, 01010</li>
-              <li>Kenya</li>
-              <li>+25470101010</li>
-              <li>example@gmail.com</li>
-            </ul>
-          </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:justify-around gap-6 text-white px-4 lg:px-16 w-[70%] sm:w-[90%] mx-auto">
+        <FooterSection title="Contact" items={contactInfo} />
+        <FooterSection title="Information" items={information} />
+        <FooterSection title="Account" items={account} />
+        <FooterSection title="Quick Links" items={quickLinks} />
 
-          <div className="mb-6">
-            <p className="font-medium text-[20px]">Information</p>
-            <ul className="text-sm">
-              <li>Privacy Policy</li>
-              <li>Refund Policy</li>
-              <li>Shipping Policy</li>
-              <li>Terms Of Services</li>
-              <li>Blogs</li>
-            </ul>
-          </div>
-
-          <div className="mb-6">
-            <p className="font-medium text-[20px]">Account</p>
-            <ul className="text-sm">
-              <li>Search</li>
-              <li>About Us</li>
-              <li>Faq</li>
-              <li>Contact</li>
-              <li>Help</li>
-            </ul>
-          </div>
-
-          <div className="mb-6">
-            <p className="font-medium text-[20px]">Quick Links</p>
-            <ul className="text-sm">
-              <li>Incense Sticks </li>
-              <li>Shankh</li>
-              <li>Kalash</li>
-              <li>Incense Holders</li>
-              <li>Cone Dhoop </li>
-            </ul>
-          </div>
-
-          <div className="flex flex-col justify-between mb-16">
-            <div>
-              <p className="font-medium text-[20px]">Social Media</p>
-              <ul className="text-sm">
-                <li>Follow us on social media and stay updated.</li>
-              </ul>
-            </div>
-
-            <div className="flex gap-4 ">
-              <img src={twitter} alt="Twitter" className="w-6" />
-              <img src={facebook} alt="Facebook" className="w-6" />
-              <img src={insta} alt="Instagram" className="w-6" />
-              <img src={youtube} alt="YouTube" className="w-6" />
-            </div>
+        <div className="flex flex-col justify-between lg:mb-10">
+          <p className="font-medium text-[20px]">Social Media</p>
+          <ul className="text-sm">
+            <li>Follow us on social media and stay updated.</li>
+          </ul>
+          <div className="flex gap-4 mt-3">
+            <img src={twitter} alt="Twitter" className="w-6" />
+            <img src={facebook} alt="Facebook" className="w-6" />
+            <img src={insta} alt="Instagram" className="w-6" />
+            <img src={youtube} alt="YouTube" className="w-6" />
           </div>
         </div>
       </div>
     </div>
   );
 };
+
+const FooterSection = ({ title, items }) => (
+  <div>
+    <p className="font-medium text-[20px]">{title}</p>
+    <ul className="text-sm">
+      {items.map((item, index) => (
+        <li key={index}>{item}</li>
+      ))}
+    </ul>
+  </div>
+);
 
 export default Footer;
