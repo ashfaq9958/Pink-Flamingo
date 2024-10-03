@@ -33,18 +33,30 @@ const Categories = () => {
       title: "Buddha statue",
     },
   ];
+
   return (
     <div className="mt-10">
-      <div className="w-[80%] mx-auto">
-        <p className="font-bold text-[20px] mb-5 ml-2">Shop Our Top Categories</p>
-        <div className=" flex justify-between gap-x-6">
+      <div className="sm:w-[80%] w-[50%] mx-auto">
+        <p className="font-bold text-[20px] mb-5 ml-2">
+          Shop Our Top Categories
+        </p>
+        <div className="lg:flex lg:justify-between justify-center lg:gap-x-6 md:grid md:grid-cols-3 md:gap-6 sm:grid sm:grid-cols-2 sm:gap-4 grid grid-cols-1 gap-10">
           {topCategories.map((item, index) => (
-            <div key={item.title}>
-              <img src={item.image} alt={item.title} />
-              <p className="text-center font-semibold text-[16px]">
+            <div
+              key={item.title}
+              className="group transition-all duration-300 ease-in-out hover:scale-105 cursor-pointer"
+            >
+              <div className="relative overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="transition-transform duration-300 ease-in-out group-hover:scale-110 group-hover:shadow-lg"
+                />
+              </div>
+              <p className="md:text-center font-semibold text-[16px] sm:ml-16 md:ml-0">
                 {item.title}
               </p>
-              <p className="text-center font-medium text-[16px] text-[#fa5c98]">
+              <p className="md:text-center font-medium text-[16px] text-[#fa5c98] sm:ml-16 md:ml-0 transition-colors duration-300 group-hover:text-[#ff3366] group-hover:underline">
                 Shop Now
               </p>
             </div>
