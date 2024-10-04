@@ -30,10 +30,10 @@ const Blog = () => {
 
   return (
     <div className="mt-10">
-      <p className="font-extrabold text-[40px] text-center md:mb-8">
+      <p className="font-extrabold text-[40px] text-center md:mb-3">
         Our Latest Blogs
       </p>
-      <div className="w-[80%] mx-auto md:flex md:justify-between md:gap-x-5 grid grid-cols-1 gap-4 p-6 ">
+      <div className="w-[80%] mx-auto md:flex md:justify-between md:gap-x-5 grid grid-cols-1 gap-4 p-6  ">
         {blogsData.map((item, index) => (
           <div key={index} className="rounded-md shadow-md w-full">
             <img src={item.img} alt="" className="w-full h-64" />

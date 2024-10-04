@@ -8,8 +8,12 @@ import {
 } from "@mui/icons-material";
 
 const HeroSection = () => (
-  <Carousel indicators={false} animation="fade" interval={2500} navButtonsAlwaysInvisible={true}>
-    <div className="relative w-[90%] mx-auto h-[30vh] flex justify-center items-center gap-10 bg-[#FFEEF6]">
+  <Carousel
+    indicators={false}
+    animation="fade"
+    interval={2500}
+    navButtonsAlwaysInvisible={true}
+  >    <div className="relative w-[90%] mx-auto h-[30vh] flex justify-center items-center gap-10 bg-[#FFEEF6]">
       <img src={Hero_1} alt="hero_1" className="w-44 py-10 object-contain" />
       <img src={Hero_2} alt="hero_2" className="w-1/3 object-contain" />
 
