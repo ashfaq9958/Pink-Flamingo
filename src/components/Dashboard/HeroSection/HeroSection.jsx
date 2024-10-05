@@ -19,7 +19,8 @@ const HeroSection = () => {
         animation="fade"
         interval={2500}
         navButtonsAlwaysInvisible={true}
-        // autoPlay
+        indicators={false}
+
       >
         {hero.map((item, index) => (
           <div
