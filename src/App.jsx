@@ -2,11 +2,9 @@ import React from "react";
 import {
   RouterProvider,
   createBrowserRouter,
-  Navigate,
 } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
-import { Dashboard, Products } from "./components/ReactLazyRoutes/ReactLazy";
-import { NotFound } from "./components/ReactLazyRoutes/ReactLazy";
+import { Dashboard, Products, NotFound } from "./components/ReactLazyRoutes/ReactLazy";
 
 const App = () => {
   const router = createBrowserRouter([
